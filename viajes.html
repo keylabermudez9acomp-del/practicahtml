@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Viajes - Destinos Turísticos</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#111;
+    color:white;
+}
+
+/* HEADER */
+
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    padding:20px 80px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(0,0,0,.8);
+    backdrop-filter:blur(8px);
+    z-index:1000;
+}
+
+.logo{
+    font-size:30px;
+    font-weight:bold;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:30px;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#ffc107;
+}
+
+/* PORTADA */
+
+.banner{
+    height:55vh;
+    background:url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600") center/cover;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    position:relative;
+}
+
+.banner::before{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:55vh;
+    background:rgba(0,0,0,.45);
+}
+
+.banner h1{
+    position:relative;
+    font-size:60px;
+    z-index:1;
+}
+
+.banner p{
+    position:relative;
+    z-index:1;
+    font-size:20px;
+}
+
+/* TARJETAS */
+
+.contenedor{
+    max-width:1200px;
+    margin:70px auto;
+    padding:20px;
+}
+
+.contenedor h2{
+    text-align:center;
+    margin-bottom:40px;
+    font-size:40px;
+}
+
+.destinos{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:#222;
+    border-radius:20px;
+    overflow:hidden;
+    transition:.4s;
+    box-shadow:0 10px 25px rgba(0,0,0,.4);
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.info{
+    padding:20px;
+}
+
+.info h3{
+    margin-bottom:15px;
+    color:#ffc107;
+}
+
+.info p{
+    line-height:1.7;
+    margin-bottom:20px;
+}
+
+button{
+    background:#ffc107;
+    border:none;
+    padding:12px 25px;
+    border-radius:30px;
+    cursor:pointer;
+    font-weight:bold;
+    transition:.3s;
+}
+
+button:hover{
+    background:#ff9800;
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:30px;
+    background:#000;
+    margin-top:60px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+<i class="fa-solid fa-earth-americas"></i>
+Destinos Turísticos
+</div>
+
+<nav>
+<a href="lugares_turisticos.html">Inicio</a>
+<a href="viajes.html">Viajes</a>
+<a href="contactos.html">Contacto</a>
+</nav>
+
+</header>
+
+<section class="banner">
+
+<div>
+<h1>Explora Ecuador</h1>
+<p>Descubre lugares increíbles para tus próximas vacaciones.</p>
+</div>
+
+</section>
+
+<section class="contenedor">
+
+<h2>Destinos Recomendados</h2>
+
+<div class="destinos">
+
+<div class="card">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/d/d8/Gye13.jpg" alt="Guayaquil">
+
+<div class="info">
+
+<h3>Guayaquil</h3>
+
+<p>
+Conoce el Malecón 2000, Las Peñas, Puerto Santa Ana y disfruta de la gastronomía costeña.
+</p>
+
+<button onclick="window.open('https://upload.wikimedia.org/wikipedia/commons/d/d8/Gye13.jpg')">
+Ver más
+</button>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://www.carmaxrentacar.com/guayaquil/wp-content/uploads/2019/03/salinas-malecon.jpg" alt="Salinas">
+
+<div class="info">
+
+<h3>Salinas</h3>
+
+<p>
+Playas, deportes acuáticos y una excelente oferta hotelera hacen de Salinas un destino ideal.
+</p>
+
+<button onclick="window.open('https://www.carmaxrentacar.com/guayaquil/wp-content/uploads/2019/03/salinas-malecon.jpg')">
+Ver más
+</button>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://www.tungurahua.gob.ec/file/2024/03/Banos-10.jpg" alt="Baños de Agua Santa">
+
+<div class="info">
+
+<h3>Baños de Agua Santa</h3>
+
+<p>
+La capital de la aventura con cascadas, aguas termales, puentes colgantes y deportes extremos.
+</p>
+
+<button onclick="window.open('https://www.tungurahua.gob.ec/file/2024/03/Banos-10.jpg')">
+Ver más
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>© 2026 Destinos Turísticos | Explora Ecuador</p>
+
+</footer>
+
+</body>
+</html>

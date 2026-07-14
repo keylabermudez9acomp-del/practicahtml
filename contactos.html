@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contacto - Destinos Turísticos</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1920") no-repeat center center/cover;
+    color:white;
+    min-height:100vh;
+}
+
+/* Fondo oscuro */
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.60);
+    z-index:-1;
+}
+
+/* HEADER */
+
+header{
+
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+
+    padding:25px 80px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    background:rgba(0,0,0,.30);
+    backdrop-filter:blur(8px);
+
+}
+
+.logo{
+
+    font-size:32px;
+    font-weight:bold;
+
+}
+
+nav a{
+
+    color:white;
+    text-decoration:none;
+    margin-left:30px;
+    transition:.3s;
+
+}
+
+nav a:hover{
+
+    color:#ffc107;
+
+}
+
+/* CONTENEDOR */
+
+.contenedor{
+
+    width:90%;
+    max-width:1100px;
+
+    margin:140px auto 50px;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+
+    gap:40px;
+
+}
+
+/* INFORMACIÓN */
+
+.info{
+
+    padding:20px;
+
+}
+
+.info h1{
+
+    font-size:50px;
+    margin-bottom:20px;
+
+}
+
+.info p{
+
+    line-height:1.8;
+    margin-bottom:30px;
+
+}
+
+.datos{
+
+    margin-bottom:30px;
+
+}
+
+.datos p{
+
+    margin:15px 0;
+    font-size:18px;
+
+}
+
+.datos i{
+
+    color:#ffc107;
+    margin-right:10px;
+    width:25px;
+
+}
+
+/* REDES */
+
+.redes a{
+
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+
+    width:45px;
+    height:45px;
+
+    border-radius:50%;
+    background:#ffc107;
+
+    color:black;
+
+    margin-right:15px;
+
+    font-size:20px;
+
+    transition:.3s;
+
+    text-decoration:none;
+
+}
+
+.redes a:hover{
+
+    transform:scale(1.15);
+    background:#ff9800;
+
+}
+
+/* FORMULARIO */
+
+.formulario{
+
+    background:rgba(255,255,255,.10);
+
+    backdrop-filter:blur(12px);
+
+    padding:35px;
+
+    border-radius:20px;
+
+}
+
+.formulario h2{
+
+    margin-bottom:25px;
+
+}
+
+input,
+textarea{
+
+    width:100%;
+
+    padding:15px;
+
+    margin-bottom:20px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:rgba(255,255,255,.15);
+
+    color:white;
+
+    font-size:16px;
+
+}
+
+input::placeholder,
+textarea::placeholder{
+
+    color:#ddd;
+
+}
+
+textarea{
+
+    resize:none;
+    height:140px;
+
+}
+
+button{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:#ffc107;
+
+    font-size:17px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    background:#ff9800;
+
+}
+
+/* FOOTER */
+
+footer{
+
+    text-align:center;
+    padding:25px;
+    background:rgba(0,0,0,.4);
+    margin-top:40px;
+
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+.contenedor{
+
+grid-template-columns:1fr;
+
+}
+
+header{
+
+padding:20px;
+
+flex-direction:column;
+
+}
+
+nav{
+
+margin-top:15px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+<i class="fa-solid fa-earth-americas"></i>
+Destinos Turísticos
+</div>
+
+<nav>
+
+<a href="lugares_turisticos.html">Inicio</a>
+<a href="viajes.html">Viajes</a>
+<a href="contactos.html">Contacto</a>
+
+</nav>
+
+</header>
+
+<div class="contenedor">
+
+<div class="info">
+
+<h1>Contáctanos</h1>
+
+<p>
+¿Tienes dudas sobre algún destino turístico o deseas recibir más información?
+Nuestro equipo estará encantado de ayudarte a planificar tu próxima aventura.
+</p>
+
+<div class="datos">
+
+<p>
+<i class="fa-solid fa-location-dot"></i>
+Guayaquil, Ecuador
+</p>
+
+<p>
+<i class="fa-solid fa-phone"></i>
++593 99 999 9999
+</p>
+
+<p>
+<i class="fa-solid fa-envelope"></i>
+info@destinosturisticos.com
+</p>
+
+</div>
+
+<div class="redes">
+
+<a href="#"><i class="fab fa-facebook-f"></i></a>
+
+<a href="#"><i class="fab fa-instagram"></i></a>
+
+<a href="#"><i class="fab fa-x-twitter"></i></a>
+
+<a href="#"><i class="fab fa-youtube"></i></a>
+
+</div>
+
+</div>
+
+<div class="formulario">
+
+<h2>Envíanos un mensaje</h2>
+
+<form>
+
+<input type="text" placeholder="Nombre completo" required>
+
+<input type="email" placeholder="Correo electrónico" required>
+
+<input type="text" placeholder="Asunto">
+
+<textarea placeholder="Escribe tu mensaje..." required></textarea>
+
+<button type="submit">
+<i class="fa-solid fa-paper-plane"></i>
+Enviar mensaje
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+<footer>
+
+<p>© 2026 Destinos Turísticos | Todos los derechos reservados.</p>
+
+</footer>
+
+</body>
+</html>

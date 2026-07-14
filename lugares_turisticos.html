@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Destinos Turísticos</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#000;
+    color:#fff;
+    overflow:hidden;
+}
+
+/* HEADER */
+
+header{
+    position:absolute;
+    top:0;
+    width:100%;
+    padding:25px 80px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:100;
+}
+
+.logo{
+    font-size:32px;
+    font-weight:bold;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:30px;
+}
+
+/* SLIDER */
+
+.slider{
+    position:relative;
+    height:100vh;
+}
+
+.slide{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background-size:cover;
+    background-position:center;
+    opacity:0;
+    transition:1s;
+}
+
+.slide.active{
+    opacity:1;
+}
+
+.slide::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.45);
+}
+
+.contenido{
+    position:absolute;
+    top:50%;
+    left:80px;
+    transform:translateY(-50%);
+    width:500px;
+    z-index:2;
+}
+
+.contenido span{
+    font-size:18px;
+}
+
+.contenido h1{
+    font-size:65px;
+    margin:20px 0;
+}
+
+.contenido p{
+    line-height:1.8;
+    margin-bottom:30px;
+}
+
+.contenido button{
+    padding:15px 35px;
+    border:none;
+    border-radius:30px;
+    background:#ffc107;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.contenido button:hover{
+    background:#ff9800;
+}
+
+/* MINIATURAS */
+
+.miniaturas{
+    position:absolute;
+    right:70px;
+    bottom:50px;
+    display:flex;
+    gap:20px;
+    z-index:20;
+}
+
+.card{
+    width:170px;
+    height:220px;
+    border-radius:20px;
+    overflow:hidden;
+    position:relative;
+    cursor:pointer;
+    transform:scale(.9);
+    transition:.4s;
+}
+
+.card.active{
+    transform:scale(1);
+    border:3px solid #ffc107;
+}
+
+.card img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.card h3{
+    position:absolute;
+    bottom:10px;
+    left:10px;
+    color:#fff;
+}
+
+/* BOTONES */
+
+.controles{
+    position:absolute;
+    left:80px;
+    bottom:80px;
+    z-index:30;
+}
+
+.controles button{
+    width:55px;
+    height:55px;
+    border:none;
+    border-radius:50%;
+    font-size:20px;
+    cursor:pointer;
+    margin-right:10px;
+    transition:.3s;
+}
+
+.controles button:hover{
+    background:#ffc107;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">Destinos Turísticos</div>
+
+<nav>
+<a href="#">Inicio</a>
+<a href="#">Viajes</a>
+<a href="#">Contacto</a>
+</nav>
+
+</header>
+
+<section class="slider">
+
+<!-- GUAYAQUIL -->
+
+<div class="slide active"
+style="background-image:url('https://tse4.mm.bing.net/th/id/OIP.XRGKyVKOYfk5QXl0j4EshgHaDt?cb=thfvnextfalcon2&rs=1&pid=ImgDetMain&o=7&rm=3');">
+
+<div class="contenido">
+
+<span>GUAYAQUIL</span>
+
+<h1>Santiago de Guayaquil</h1>
+
+<p>
+La capital económica y el puerto marítimo más importante del Ecuador.
+</p>
+
+<button onclick="window.open('https://upload.wikimedia.org/wikipedia/commons/d/d8/Gye13.jpg')">
+Descubrir destino
+</button>
+
+</div>
+
+</div>
+
+<!-- SALINAS -->
+
+<div class="slide"
+style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/2/20/Malec%C3%B3n_of_Puerto_L%C3%B3pez.jpg');">
+
+<div class="contenido">
+
+<span>SANTA ELENA</span>
+
+<h1>Salinas</h1>
+
+<p>
+Uno de los balnearios más visitados del Ecuador por sus playas y gastronomía.
+</p>
+
+<button onclick="window.open('https://www.carmaxrentacar.com/guayaquil/wp-content/uploads/2019/03/salinas-malecon.jpg')">
+Descubrir destino
+</button>
+
+</div>
+
+</div>
+
+<!-- BAÑOS -->
+
+<div class="slide"
+style="background-image:url('https://www.tungurahua.gob.ec/file/2024/03/Banos-10.jpg');">
+
+<div class="contenido">
+
+<span>BAÑOS DE AGUA SANTA</span>
+
+<h1>Capital de la aventura</h1>
+
+<p>
+Destino reconocido por sus cascadas, aguas termales y deportes extremos.
+</p>
+
+<button onclick="window.open('https://www.tungurahua.gob.ec/file/2024/03/Banos-10.jpg')">
+Descubrir destino
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- MINIATURAS -->
+
+<div class="miniaturas">
+
+<div class="card active">
+<img src="https://upload.wikimedia.org/wikipedia/commons/d/d8/Gye13.jpg">
+<h3>GUAYAQUIL</h3>
+</div>
+
+<div class="card">
+<img src="https://www.carmaxrentacar.com/guayaquil/wp-content/uploads/2019/03/salinas-malecon.jpg">
+<h3>SALINAS</h3>
+</div>
+
+<div class="card">
+<img src="https://www.tungurahua.gob.ec/file/2024/03/Banos-10.jpg">
+<h3>BAÑOS</h3>
+</div>
+
+</div>
+
+<!-- BOTONES -->
+
+<div class="controles">
+
+<button id="anterior">
+<i class="fa-solid fa-chevron-left"></i>
+</button>
+
+<button id="siguiente">
+<i class="fa-solid fa-chevron-right"></i>
+</button>
+
+</div>
+
+<script>
+
+const slides = document.querySelectorAll(".slide");
+const cards = document.querySelectorAll(".card");
+
+const siguiente = document.getElementById("siguiente");
+const anterior = document.getElementById("anterior");
+
+let indice = 0;
+
+function mostrarSlide(i){
+
+    slides.forEach(slide=>{
+        slide.classList.remove("active");
+    });
+
+    cards.forEach(card=>{
+        card.classList.remove("active");
+    });
+
+    slides[i].classList.add("active");
+    cards[i].classList.add("active");
+
+}
+
+// Mostrar el primer slide
+mostrarSlide(indice);
+
+// Botón siguiente
+siguiente.addEventListener("click",function(){
+
+    indice++;
+
+    if(indice>=slides.length){
+        indice=0;
+    }
+
+    mostrarSlide(indice);
+
+});
+
+// Botón anterior
+anterior.addEventListener("click",function(){
+
+    indice--;
+
+    if(indice<0){
+        indice=slides.length-1;
+    }
+
+    mostrarSlide(indice);
+
+});
+
+// Click en miniaturas
+cards.forEach((card,i)=>{
+
+    card.addEventListener("click",function(){
+
+        indice=i;
+        mostrarSlide(indice);
+
+    });
+
+});
+
+// Cambio automático
+setInterval(function(){
+
+    indice++;
+
+    if(indice>=slides.length){
+        indice=0;
+    }
+
+    mostrarSlide(indice);
+
+},5000);
+
+</script>
+
+</body>
+</html>
